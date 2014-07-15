@@ -1,0 +1,2 @@
+module ForumPagesHelper
+end

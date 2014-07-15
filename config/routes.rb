@@ -1,4 +1,6 @@
 Forum::Application.routes.draw do
+  get "forum_pages/home"
+  get "forum_pages/help"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

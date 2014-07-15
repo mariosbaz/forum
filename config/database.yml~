@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: forum_development
   pool: 5
-  username: marios
+  username: forum
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: forum_test
   pool: 5
-  username: marios
+  username: forum
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: forum_production
   pool: 5
-  username: marios
+  username: forum
   password:
