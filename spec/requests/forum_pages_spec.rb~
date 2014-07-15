@@ -1,0 +1,20 @@
+require 'spec_helper'
+
+describe "Forum pages" do
+
+  describe "Home page" do
+
+    it "should have the content 'Forum App'" do
+      visit '/forum_pages/home'
+      expect(page).to have_content('Forum App')
+    end
+  end
+
+  describe "Help page" do
+
+    it "should have the content 'Help'" do
+      visit '/forum_pages/help'
+      expect(page).to have_content('Help')
+    end
+  end
+end
