@@ -7,7 +7,6 @@ Forum::Application.routes.draw do
   
   match '/help',    to: 'forum_pages#help',     via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
-  
   #get 'forum_pages/home'
   #get 'forum_pages/help'
 
