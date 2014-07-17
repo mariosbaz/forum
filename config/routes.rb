@@ -1,5 +1,5 @@
 Forum::Application.routes.draw do
-
+  resources :users
   get "users/new" 
   root  'forum_pages#home'  
   match '/help',    to: 'forum_pages#help',     via: 'get'
