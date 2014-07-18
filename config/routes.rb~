@@ -1,10 +1,13 @@
 Forum::Application.routes.draw do
-
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   get "users/new" 
   root  'forum_pages#home'  
   match '/help',    to: 'forum_pages#help',     via: 'get'
   match '/signup',  to: 'users#new',            via: 'get'
-  
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   #get 'forum_pages/home'
   #get 'forum_pages/help'
 
