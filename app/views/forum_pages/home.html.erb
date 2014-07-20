@@ -1,13 +1,37 @@
-<% provide(:title, 'Home') %>
-<div class="center hero-unit">
-  <h1>Welcome to the Forum App</h1>
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+	<h1>
+	  <%= current_user.name %>
+	</h1>
+	<span>
+	  <%= link_to "view my profile", current_user %>
+	</span>
+	<span>
+	  <%= pluralize(current_user.microposts.count, "micropost") %>
+	</span>
+      </section>
+      <section>
+	<%= form_for(@micropost) do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+	  <div class="field">
+	    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+	  </div>
+	  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+	<% end %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <h1>Welcome!!!</h1>
 
-  <h2>
-    This is the home page for the
-    my forum application.
-  </h2>
+    <h2>
+      This is my blog.Please sign in, or signup.
+    </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
-</div>
-
-
+    <%= link_to "Sign up now!", signup_path,
+                                class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>

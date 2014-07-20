@@ -10,6 +10,7 @@ class UsersController < ApplicationController
    
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.find(params[:user_id])
   end
 
   def index
@@ -52,14 +53,7 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
-    end
-
-    def signed_in_user
-      unless signed_in?
-        store_location
-        redirect_to signin_url, notice: "Please sign in."
-      end
-    end
+    end    
 
     def correct_user
       @user = User.find(params[:id])

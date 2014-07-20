@@ -7,4 +7,18 @@
       </h1>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.microposts.any? %>
+      <h3>Microposts (<%= @user.microposts.count %>)</h3>
+      <ol class="microposts">
+         <li>
+  	  <span class="content"><%= micropost.content %></span>
+          <span class="timestamp">
+          Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+          </span>
+        </li>
+      </ol>      
+    <% end %>
+  </div>
+
 </div>
