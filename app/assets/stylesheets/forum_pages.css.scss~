@@ -17,7 +17,7 @@ html {
 
 body {
   padding-top: 60px;
-  # background-image: url('<%= asset_path("back.jpg") %> ');
+  background-color:#008B8B;
     color: #999;
 }
 
