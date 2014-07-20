@@ -17,8 +17,7 @@ html {
 
 body {
   padding-top: 60px;
-  background-color:#008B8B;
-    color: #999;
+  color: #999;
 }
 
 section {
