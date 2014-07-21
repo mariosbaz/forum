@@ -42,8 +42,8 @@ textarea {
 }
 
 #center_hero_unit{
-  background-image: url("back.jpg");
- # background-color: #FFF8DC;
+  #background-image: url("back.jpg");
+  background-color: #DCDCDC		;
 }
 
 /* typography */
