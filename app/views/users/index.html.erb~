@@ -6,7 +6,7 @@
 </ul>
 <% else %>
     <div class="center hero-unit">
-    <h1>Welcome!!!</h1>
+    <h2>Welcome!!!</h2>
 
     <h2>
       This is my blog.Please sign in, or signup.

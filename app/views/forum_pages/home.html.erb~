@@ -2,10 +2,24 @@
   <div class="row">
     <aside class="span4">
       <section>
-        <%= render 'shared/user_info' %>
+	<h1>
+	  <%= current_user.name %>
+	</h1>
+	<span>
+	  <%= link_to "view my profile", current_user %>
+	</span>
+	<span>
+	  <%= pluralize(current_user.microposts.count, "micropost") %>
+	</span>
       </section>
       <section>
-        <%= render 'shared/micropost_form' %>
+	<%= form_for(@micropost) do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+	  <div class="field">
+	    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+	  </div>
+	  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+	<% end %>
       </section>
     </aside>
   </div>

@@ -18,8 +18,8 @@
   </div>
 </div>
 <% else %>
-<div >
-    <h1>You are not authenticated</h1>
+<div class="center hero-unit">
+    <h2>You are not authenticated</h2>
 
     <%= link_to "Sign in!", signin_path,class: "btn btn-large btn-primary"  %>    
     <p>or</p>
