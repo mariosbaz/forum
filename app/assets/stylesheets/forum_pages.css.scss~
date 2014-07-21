@@ -9,6 +9,7 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  color:#000;
 }
 
 html {
@@ -18,6 +19,8 @@ html {
 body {
   padding-top: 60px;
   background-image: url("back.jpg");
+  background-repeat: no-repeat;
+  background-size: 2000px 960px;
   color: #000;
 }
 
@@ -25,7 +28,7 @@ section {
   overflow: auto;
 }
 
-textarea {
+textarea {  
   resize: vertical;
 }
 
@@ -40,7 +43,7 @@ textarea {
 
 #center_hero_unit{
   background-image: url("back.jpg");
-  background-color: #1E90FF;
+ # background-color: #FFF8DC;
 }
 
 /* typography */
@@ -71,6 +74,10 @@ p {
   line-height: 1.7em;
 }
 
+#my_users{
+  color:#000;
+}
+
 /* header */
 
 #logo {
@@ -99,27 +106,6 @@ footer {
   color: #999;
 }
 
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}
 
 /* sidebar */
 
@@ -132,6 +118,7 @@ aside {
       padding-top: 0;
     }
     span {
+      
       display: block;
       margin-bottom: 3px;
       line-height: 1;
@@ -149,7 +136,6 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  color:#000;
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;  
@@ -173,15 +159,17 @@ input {
   @extend .error;
 }
 
-.users {
-  list-style: none;
+.users {  
+  text-color:#000;
   margin: 0;
   li {
+    text-decoration: underline;
+    text-color:#000;
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $gray;
+    border-top: 1px solid #000;;
     &:last-child {
-      border-bottom: 1px solid $gray;
+      border-bottom: 1px solid #000;;
     }
   }
 }
@@ -201,7 +189,7 @@ input {
   display: block;
 }
 .timestamp {
-  color: $grayLight;
+  color: $gray;
 }
 
 aside {
