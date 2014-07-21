@@ -1,4 +1,5 @@
 <% provide(:title, @user.name) %>
+<% if signed_in? %>
 <div class="row">
   <aside class="span4">
     <section>
@@ -11,14 +12,18 @@
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
-         <li>
-  	  <span class="content"><%= micropost.content %></span>
-          <span class="timestamp">
-          Posted <%= time_ago_in_words(micropost.created_at) %> ago.
-          </span>
-        </li>
+          <%= render @microposts %>
       </ol>      
     <% end %>
   </div>
-
 </div>
+<% else %>
+<div >
+    <h1>You are not authenticated</h1>
+
+    <%= link_to "Sign in!", signin_path,class: "btn btn-large btn-primary"  %>    
+    <p>or</p>
+    <%= link_to "Sign up now!", signup_path,
+                                class: "btn btn-large btn-primary" %>
+  </div>
+<% end %>
