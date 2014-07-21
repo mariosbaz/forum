@@ -17,7 +17,7 @@ html {
 
 body {
   padding-top: 60px;
-  color: #999;
+  color: #000;
 }
 
 section {
@@ -125,7 +125,7 @@ footer ul li {
 aside {
   section {
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $gray;
     &:first-child {
       border: 0;
       padding-top: 0;
@@ -148,6 +148,7 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
+  color:#000;
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;  
@@ -177,9 +178,9 @@ input {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-top: 1px solid $grayLighter;
+    border-top: 1px solid $gray;
     &:last-child {
-      border-bottom: 1px solid $grayLighter;
+      border-bottom: 1px solid $gray;
     }
   }
 }
